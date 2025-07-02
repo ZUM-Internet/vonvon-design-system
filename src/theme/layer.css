@@ -1,0 +1,44 @@
+@layer components {
+  .title-sm {
+    @apply text-(length:--font-title-sm-size) leading-(--font-title-sm-line-height) tracking-(--font-title-sm-letter-spacing);
+  }
+  .heading-xxl {
+    @apply text-(length:--font-heading-xxl-size) leading-(--font-heading-xxl-line-height) tracking-(--font-heading-xxl-letter-spacing);
+  }
+  .heading-xl {
+    @apply text-(length:--font-heading-xl-size) leading-(--font-heading-xl-line-height) tracking-(--font-heading-xl-letter-spacing);
+  }
+  .heading-lg {
+    @apply text-(length:--font-heading-lg-size) leading-(--font-heading-lg-line-height) tracking-(--font-heading-lg-letter-spacing);
+  }
+  .heading-md {
+    @apply text-(length:--font-heading-md-size) leading-(--font-heading-md-line-height) tracking-(--font-heading-md-letter-spacing);
+  }
+  .heading-sm {
+    @apply text-(length:--font-heading-sm-size) leading-(--font-heading-sm-line-height) tracking-(--font-heading-sm-letter-spacing);
+  }
+  .body-lg-reading {
+    @apply text-(length:--font-body-lg-reading-size) leading-(--font-body-lg-reading-line-height) tracking-(--font-body-lg-reading-letter-spacing);
+  }
+  .body-lg-normal {
+    @apply text-(length:--font-body-lg-normal-size) leading-(--font-body-lg-normal-line-height) tracking-(--font-body-lg-normal-letter-spacing);
+  }
+  .body-md-reading {
+    @apply text-(length:--font-body-md-reading-size) leading-(--font-body-md-reading-line-height) tracking-(--font-body-md-reading-letter-spacing);
+  }
+  .body-md-normal {
+    @apply text-(length:--font-body-md-normal-size) leading-(--font-body-md-normal-line-height) tracking-(--font-body-md-normal-letter-spacing);
+  }
+  .body-sm-reading {
+    @apply text-(length:--font-body-sm-reading-size) leading-(--font-body-sm-reading-line-height) tracking-(--font-body-sm-reading-letter-spacing);
+  }
+  .body-sm-normal {
+    @apply text-(length:--font-body-sm-normal-size) leading-(--font-body-sm-normal-line-height) tracking-(--font-body-sm-normal-letter-spacing);
+  }
+  .label-md {
+    @apply text-(length:--font-label-md-size) leading-(--font-label-md-line-height) tracking-(--font-label-md-letter-spacing);
+  }
+  .label-sm {
+    @apply text-(length:--font-label-sm-size) leading-(--font-label-sm-line-height) tracking-(--font-label-sm-letter-spacing);
+  }
+}

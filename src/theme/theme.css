@@ -1,0 +1,86 @@
+@theme {
+  --color-primary-normal: #ff5258;
+  --color-primary-heavy: #bb2b30;
+  --color-primary-strong: #e9494e;
+  --color-primary-neutral: #ffa0a3;
+  --color-primary-alternative: #ffd1d3;
+
+  --color-label-normal: #1c1c1c;
+  --color-label-strong: #0f0f0f;
+  --color-label-neutral: #474747;
+  --color-label-alternative: #5c5c5c;
+  --color-label-assitive: #b0b0b0;
+
+  --color-opacity-normal: rgba(255, 255, 255, 0.9);
+  --color-opacity-strong: rgba(0, 0, 0, 0.76);
+  --color-opacity-alternative: #f7f7f7;
+
+  --border-width-default: 1px;
+  --border-color-cool-neutral-90: #c2c4c8;
+
+  --shadow-normal: 0px -4px 20px rgba(75, 75, 75, 0.08);
+
+  --color-static-white: #fff;
+  --color-static-black: #000;
+  --color-material-dimmer: rgba(0, 0, 0, 0.6);
+
+  /* Title */
+  --font-title-sm-size: 26px;
+  --font-title-sm-line-height: 120%;
+  --font-title-sm-letter-spacing: -0.26px;
+
+  /* Heading */
+  --font-heading-xxl-size: 24px;
+  --font-heading-xxl-line-height: 135%;
+  --font-heading-xxl-letter-spacing: -0.48px;
+
+  --font-heading-xl-size: 22px;
+  --font-heading-xl-line-height: 120%;
+  --font-heading-xl-letter-spacing: -0.44px;
+
+  --font-heading-lg-size: 20px;
+  --font-heading-lg-line-height: 120%;
+  --font-heading-lg-letter-spacing: -0.4px;
+
+  --font-heading-md-size: 18px;
+  --font-heading-md-line-height: 140%;
+  --font-heading-md-letter-spacing: -0.36px;
+
+  --font-heading-sm-size: 17px;
+  --font-heading-sm-line-height: 140%;
+  --font-heading-sm-letter-spacing: -0.34px;
+
+  /* Body */
+  --font-body-lg-reading-size: 16px;
+  --font-body-lg-reading-line-height: 140%;
+  --font-body-lg-reading-letter-spacing: 0.32px;
+
+  --font-body-lg-normal-size: 16px;
+  --font-body-lg-normal-line-height: 120%;
+  --font-body-lg-normal-letter-spacing: -0.32px;
+
+  --font-body-md-reading-size: 15px;
+  --font-body-md-reading-line-height: 140%;
+  --font-body-md-reading-letter-spacing: -0.3px;
+
+  --font-body-md-normal-size: 15px;
+  --font-body-md-normal-line-height: 120%;
+  --font-body-md-normal-letter-spacing: -0.3px;
+
+  --font-body-sm-reading-size: 14px;
+  --font-body-sm-reading-line-height: 140%;
+  --font-body-sm-reading-letter-spacing: -0.28px;
+
+  --font-body-sm-normal-size: 14px;
+  --font-body-sm-normal-line-height: 120%;
+  --font-body-sm-normal-letter-spacing: -0.28px;
+
+  /* Label */
+  --font-label-md-size: 13px;
+  --font-label-md-line-height: 120%;
+  --font-label-md-letter-spacing: -0.26px;
+
+  --font-label-sm-size: 12px;
+  --font-label-sm-line-height: 120%;
+  --font-label-sm-letter-spacing: -0.12px;
+}
