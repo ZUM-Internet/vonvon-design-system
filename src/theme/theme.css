@@ -4,25 +4,33 @@
   --color-primary-strong: #e9494e;
   --color-primary-neutral: #ffa0a3;
   --color-primary-alternative: #ffd1d3;
+  --color-primary-assistive: #fff5f5;
 
-  --color-label-normal: #1c1c1c;
-  --color-label-strong: #0f0f0f;
-  --color-label-neutral: #474747;
-  --color-label-alternative: #5c5c5c;
-  --color-label-assitive: #b0b0b0;
+  --color-label-heavy: #0f0f0f;
+  --color-label-strong: #1c1c1c;
+  --color-label-normal: #474747;
+  --color-label-neutral: #5c5c5c;
+  --color-label-alternative: #8a8a8a;
+  --color-label-assistive: #b0b0b0;
 
   --color-opacity-normal: rgba(255, 255, 255, 0.9);
   --color-opacity-strong: rgba(0, 0, 0, 0.76);
+  --color-opacity-neutral: #dbdcdf;
   --color-opacity-alternative: #f7f7f7;
+
+  --color-interaction-disable: #eaebec;
 
   --border-width-default: 1px;
   --border-color-cool-neutral-90: #c2c4c8;
 
+  --shadow-strong: 0px -4px 20px rgba(75, 75, 75, 0.2);
   --shadow-normal: 0px -4px 20px rgba(75, 75, 75, 0.08);
 
   --color-static-white: #fff;
   --color-static-black: #000;
   --color-material-dimmer: rgba(0, 0, 0, 0.6);
+
+  --color-social-kakao: #ffed47;
 
   /* Title */
   --font-title-sm-size: 26px;

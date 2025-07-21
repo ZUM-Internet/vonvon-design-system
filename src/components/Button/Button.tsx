@@ -16,7 +16,7 @@ const Button: React.FC<ButtonProps> = ({ children, disabled = false, ...props })
   return (
     <button
       type="button"
-      className={`w-[168px] py-4 bg-[#FF5258] text-white font-semibold text-[17px] leading-[1.4] rounded-[12px] text-center transition-opacity disabled:opacity-50 disabled:cursor-not-allowed`}
+      className={`w-[168px] py-4 bg-primary-normal text-white font-semibold text-[17px] leading-[1.4] rounded-[12px] text-center transition-opacity disabled:opacity-50 disabled:cursor-not-allowed`}
       style={{ fontFamily: "Pretendard, sans-serif", letterSpacing: "-1%" }}
       disabled={disabled}
       {...props}
