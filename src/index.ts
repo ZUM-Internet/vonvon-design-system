@@ -1,2 +1,3 @@
-// export { default as Toast } from "./components/Toast/Toast";
+import "./index.css";
+
 export { default as Button } from "./components/Button/Button";
