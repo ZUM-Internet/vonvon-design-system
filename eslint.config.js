@@ -12,54 +12,59 @@ import pluginImport from "eslint-plugin-import";
 import pluginPrettier from "eslint-plugin-prettier";
 import prettierConfig from "eslint-config-prettier";
 
-export default [{
-  ignores: ["dist", "node_modules"],
-}, {
-  files: ["**/*.{js,jsx,ts,tsx}"],
-  languageOptions: {
-    parser: parserTs,
-    parserOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
-      ecmaFeatures: {
-        jsx: true,
+export default [
+  {
+    ignores: ["dist", "node_modules"],
+  },
+  {
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    languageOptions: {
+      parser: parserTs,
+      parserOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es2021,
       },
     },
-    globals: {
-      ...globals.browser,
-      ...globals.node,
-      ...globals.es2021,
+    plugins: {
+      "@typescript-eslint": pluginTs,
+      react: pluginReact,
+      "react-hooks": pluginReactHooks,
+      import: pluginImport,
+      prettier: pluginPrettier,
     },
-  },
-  plugins: {
-    "@typescript-eslint": pluginTs,
-    react: pluginReact,
-    "react-hooks": pluginReactHooks,
-    import: pluginImport,
-    prettier: pluginPrettier,
-  },
-  settings: {
-    react: {
-      version: "detect",
-    },
-  },
-  rules: {
-    ...js.configs.recommended.rules,
-    ...pluginTs.configs.recommended.rules,
-    ...pluginReact.configs.recommended.rules,
-    ...pluginReactHooks.configs.recommended.rules,
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-no-target-blank": "off",
-    "import/order": [
-      "off",
-      {
-        groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
-        "newlines-between": "always",
+    settings: {
+      react: {
+        version: "detect",
       },
-    ],
-    "prettier/prettier": "warn",
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      ...pluginTs.configs.recommended.rules,
+      ...pluginReact.configs.recommended.rules,
+      ...pluginReactHooks.configs.recommended.rules,
+      "react/react-in-jsx-scope": "off",
+      "react/jsx-no-target-blank": "off",
+      "import/order": [
+        "off",
+        {
+          groups: ["builtin", "external", "internal", "parent", "sibling", "index"],
+          "newlines-between": "always",
+        },
+      ],
+      "prettier/prettier": "warn",
+    },
   },
-}, {
-  // Prettier 마지막에 끼워넣기 (형식 충돌 방지용)
-  rules: prettierConfig.rules,
-}, ...storybook.configs["flat/recommended"]];
+  {
+    // Prettier 마지막에 끼워넣기 (형식 충돌 방지용)
+    rules: prettierConfig.rules,
+  },
+  ...storybook.configs["flat/recommended"],
+];

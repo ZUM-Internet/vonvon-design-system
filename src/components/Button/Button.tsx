@@ -10,13 +10,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
  * - 색상: #FF5258 (배경), #FFFFFF (텍스트)
  * - 폰트: Pretendard, 17px, 600
  * - 패딩: 16px 0
- * - 너비: 168px, border-radius: 12px
+ * - border-radius: 12px
  */
-const Button: React.FC<ButtonProps> = ({ children, disabled = false, ...props }) => {
+
+const Button = ({ children, disabled = false, ...props }: ButtonProps) => {
   return (
     <button
       type="button"
-      className={`w-[168px] py-4 bg-primary-normal text-white font-semibold text-[17px] leading-[1.4] rounded-[12px] text-center transition-opacity disabled:opacity-50 disabled:cursor-not-allowed`}
+      className={`px-6 py-4 bg-primary-normal text-white font-semibold text-[17px] leading-[1.4] rounded-[12px] text-center transition-opacity disabled:opacity-50 disabled:cursor-not-allowed`}
       style={{ fontFamily: "Pretendard, sans-serif", letterSpacing: "-1%" }}
       disabled={disabled}
       {...props}
