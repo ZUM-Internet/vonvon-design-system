@@ -5,6 +5,22 @@
   --color-primary-neutral: #ffa0a3;
   --color-primary-alternative: #ffd1d3;
   --color-primary-assistive: #fff5f5;
+  --color-primary-dark: #e9494e;
+
+  /* Assistive Colors */
+  --color-assistive-light: #ffd1d3;
+  --color-assistive-normal: #ffa0a3;
+  --color-assistive-dark: #e9494e;
+
+  /* Outlined Colors */
+  --color-outlined-normal: #ffa0a3;
+  --color-outlined-disabled: #b0b0b0;
+  --color-outlined-hover: #fff5f5;
+
+  /* Text Colors */
+  --color-text-normal: #5c5c5c;
+  --color-text-disabled: #b0b0b0;
+  --color-text-hover: #f7f7f8;
 
   --color-label-heavy: #0f0f0f;
   --color-label-strong: #1c1c1c;

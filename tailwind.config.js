@@ -4,7 +4,34 @@ export default {
     files: ["./src/**/*.{js,ts,jsx,tsx}", "./index.html", "./src/**/*.stories.{js,ts,jsx,tsx}"],
   },
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: {
+          normal: "var(--color-primary-normal)",
+          heavy: "var(--color-primary-heavy)",
+          strong: "var(--color-primary-strong)",
+          neutral: "var(--color-primary-neutral)",
+          alternative: "var(--color-primary-alternative)",
+          assistive: "var(--color-primary-assistive)",
+          dark: "var(--color-primary-dark)",
+        },
+        assistive: {
+          light: "var(--color-assistive-light)",
+          normal: "var(--color-assistive-normal)",
+          dark: "var(--color-assistive-dark)",
+        },
+        outlined: {
+          normal: "var(--color-outlined-normal)",
+          disabled: "var(--color-outlined-disabled)",
+          hover: "var(--color-outlined-hover)",
+        },
+        text: {
+          normal: "var(--color-text-normal)",
+          disabled: "var(--color-text-disabled)",
+          hover: "var(--color-text-hover)",
+        },
+      },
+    },
   },
   plugins: [],
   safelist: [
@@ -15,12 +42,30 @@ export default {
     "bg-primary-neutral",
     "bg-primary-alternative",
     "bg-primary-assistive",
+    "bg-primary-dark",
     "text-primary-normal",
     "text-primary-heavy",
     "text-primary-strong",
     "text-primary-neutral",
     "text-primary-alternative",
     "text-primary-assistive",
+
+    // Assistive Colors
+    "bg-assistive-light",
+    "bg-assistive-normal",
+    "text-assistive-dark",
+
+    // Outlined Colors
+    "border-outlined-normal",
+    "border-outlined-disabled",
+    "text-outlined-normal",
+    "text-outlined-disabled",
+    "bg-outlined-hover",
+
+    // Text Colors
+    "text-text-normal",
+    "text-text-disabled",
+    "bg-text-hover",
 
     // Label Colors
     "text-label-heavy",

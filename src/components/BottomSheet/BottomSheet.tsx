@@ -246,7 +246,7 @@ const BottomSheet = ({
 
           {/* Bottom Sheet */}
           <motion.div
-            className={`relative w-full max-w-[375px] bg-static-white rounded-t-[20px] shadow-strong ${className}`}
+            className={`relative w-full max-w-[500px] bg-static-white rounded-t-[20px] shadow-strong ${className}`}
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             exit={{ y: "100%" }}
