@@ -8,6 +8,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
+  fullWidth?: boolean;
 }
 
 /**
@@ -27,6 +28,11 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
  * - sm: 작은 크기
  * - md: 중간 크기 (기본)
  * - lg: 큰 크기
+ *
+ * Width Control:
+ * - fullWidth: 부모 컨테이너 전체 너비 사용
+ * - className prop으로 커스텀 너비 클래스 적용 가능 (예: "w-48", "max-w-xs")
+ * - style prop으로 인라인 너비 스타일 적용 가능 (예: {width: '200px'})
  */
 
 const Button = ({
@@ -37,11 +43,13 @@ const Button = ({
   disabled = false,
   icon,
   iconPosition = "left",
+  fullWidth = false,
+  className,
   ...props
 }: ButtonProps) => {
   // Base classes
   const baseClasses =
-    "inline-flex items-center justify-center font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed";
+    "inline-flex items-center justify-center font-medium transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer";
 
   // Size classes
   const sizeClasses = {
@@ -80,7 +88,14 @@ const Button = ({
     return "";
   };
 
-  const classes = [baseClasses, sizeClasses[size], getVariantClasses(), "font-family-pretendard"]
+  const classes = [
+    baseClasses,
+    sizeClasses[size],
+    getVariantClasses(),
+    "font-family-pretendard",
+    fullWidth ? "w-full" : "",
+    className,
+  ]
     .filter(Boolean)
     .join(" ");
 

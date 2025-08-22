@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 interface BottomSheetProps {
   isOpen: boolean;
   onClose: () => void;
+  isCloseButton?: boolean;
   variant?: "default" | "emphasized" | "image";
   title?: string;
   description?: string;
@@ -28,6 +29,7 @@ interface BottomSheetProps {
 const BottomSheet = ({
   isOpen,
   onClose,
+  isCloseButton = false,
   variant = "default",
   title = "제목을 입력해 주세요.",
   description,
@@ -192,34 +194,48 @@ const BottomSheet = ({
           <>
             {/* Header */}
             <div className="flex items-center justify-between px-5 pt-7 pb-5">
-              <h2
-                className="flex-1 text-label-strong font-bold text-[22px] leading-[1.2] tracking-[-0.44px] truncate"
-                style={{ fontFamily: "Pretendard, sans-serif" }}
-                title={title}
-              >
-                {title}
-              </h2>
-              <button
-                onClick={onClose}
-                className="flex items-center justify-center w-6 h-6 p-0 bg-transparent border-0 cursor-pointer"
-                aria-label="닫기"
-              >
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div className="w-full flex flex-col gap-[4px]">
+                <h2
+                  className="flex-1 text-label-strong font-bold text-[22px] leading-[1.2] tracking-[-0.44px] truncate"
+                  style={{ fontFamily: "Pretendard, sans-serif" }}
+                  title={title}
                 >
-                  <path
-                    d="M1 1L13 13M1 13L13 1"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+                  {title}
+                </h2>
+                {description && (
+                  <p
+                    className="text-label-neutral text-[15px] leading-[1.5] tracking-[-0.3px] truncate"
+                    style={{ fontFamily: "Pretendard, sans-serif" }}
+                    title={description}
+                  >
+                    {description}
+                  </p>
+                )}
+              </div>
+
+              {isCloseButton && (
+                <button
+                  onClick={onClose}
+                  className="flex items-center justify-center w-6 h-6 p-0 bg-transparent border-0 cursor-pointer"
+                  aria-label="닫기"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1L13 13M1 13L13 1"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              )}
             </div>
 
             {/* Content Area */}

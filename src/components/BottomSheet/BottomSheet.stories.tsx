@@ -62,6 +62,7 @@ export const Default: StoryObj<typeof BottomSheet> = {
     isOpen: true,
     variant: "default",
     title: "제목을 입력해 주세요.",
+    description: "설명을 입력해 주세요.",
     children: (
       <div className="space-y-4">
         <p className="text-label-normal body-md-normal">
