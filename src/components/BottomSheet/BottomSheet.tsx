@@ -16,6 +16,7 @@ interface BottomSheetProps {
   onSecondaryAction?: () => void;
   children?: React.ReactNode;
   className?: string;
+  textAlign?: "left" | "center" | "right";
 }
 
 /**
@@ -41,6 +42,7 @@ const BottomSheet = ({
   onSecondaryAction,
   children,
   className = "",
+  textAlign = "left",
 }: BottomSheetProps) => {
   // ESC 키로 닫기
   useEffect(() => {
@@ -62,6 +64,9 @@ const BottomSheet = ({
     };
   }, [isOpen, onClose]);
 
+  const textAlignClass =
+    textAlign === "center" ? "text-center" : textAlign === "right" ? "text-right" : "text-left";
+
   const renderContent = () => {
     switch (variant) {
       case "emphasized":
@@ -79,7 +84,7 @@ const BottomSheet = ({
             {/* Header */}
             <div className="text-center px-2 mb-5">
               <h2
-                className="text-label-strong font-bold text-[24px] leading-[1.38] tracking-[-0.48px] mb-1 truncate"
+                className={`text-label-strong font-bold text-[24px] leading-[1.38] tracking-[-0.48px] mb-1 truncate ${textAlignClass}`}
                 style={{ fontFamily: "Pretendard, sans-serif" }}
                 title={title}
               >
@@ -87,7 +92,7 @@ const BottomSheet = ({
               </h2>
               {description && (
                 <p
-                  className="text-label-neutral text-[15px] leading-[1.5] tracking-[-0.3px] truncate"
+                  className={`text-label-neutral text-[15px] leading-[1.5] tracking-[-0.3px] truncate ${textAlignClass}`}
                   style={{ fontFamily: "Pretendard, sans-serif" }}
                   title={description}
                 >
@@ -146,7 +151,7 @@ const BottomSheet = ({
             {/* Header */}
             <div className="text-center px-2 mb-5">
               <h2
-                className="text-label-strong font-bold text-[24px] leading-[1.38] tracking-[-0.48px] mb-1 truncate"
+                className={`text-label-strong font-bold text-[24px] leading-[1.38] tracking-[-0.48px] mb-1 truncate ${textAlignClass}`}
                 style={{ fontFamily: "Pretendard, sans-serif" }}
                 title={title}
               >
@@ -154,7 +159,7 @@ const BottomSheet = ({
               </h2>
               {description && (
                 <p
-                  className="text-label-neutral text-[15px] leading-[1.5] tracking-[-0.3px] truncate"
+                  className={`text-label-neutral text-[15px] leading-[1.5] tracking-[-0.3px] truncate ${textAlignClass}`}
                   style={{ fontFamily: "Pretendard, sans-serif" }}
                   title={description}
                 >
@@ -196,7 +201,7 @@ const BottomSheet = ({
             <div className="flex items-center justify-between px-5 pt-7 pb-5">
               <div className="w-full flex flex-col gap-[4px]">
                 <h2
-                  className="flex-1 text-label-strong font-bold text-[22px] leading-[1.2] tracking-[-0.44px] truncate"
+                  className={`flex-1 text-label-strong font-bold text-[22px] leading-[1.2] tracking-[-0.44px] truncate ${textAlignClass}`}
                   style={{ fontFamily: "Pretendard, sans-serif" }}
                   title={title}
                 >
@@ -204,7 +209,7 @@ const BottomSheet = ({
                 </h2>
                 {description && (
                   <p
-                    className="text-label-neutral text-[15px] leading-[1.5] tracking-[-0.3px] truncate"
+                    className={`text-label-neutral text-[15px] leading-[1.5] tracking-[-0.3px] truncate ${textAlignClass}`}
                     style={{ fontFamily: "Pretendard, sans-serif" }}
                     title={description}
                   >
