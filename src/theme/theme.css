@@ -50,8 +50,9 @@
 
   /* Title */
   --font-title-sm-size: 26px;
-  --font-title-sm-line-height: 120%;
-  --font-title-sm-letter-spacing: -0.26px;
+  --font-title-sm-line-height: 138%;
+  --font-title-sm-letter-spacing: -1%;
+  --font-title-sm-font-weight: 700;
 
   /* Heading */
   --font-heading-xxl-size: 24px;

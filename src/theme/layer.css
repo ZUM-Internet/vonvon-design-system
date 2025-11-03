@@ -1,5 +1,6 @@
 @utility title-sm {
   @apply text-(length:--font-title-sm-size) leading-(--font-title-sm-line-height) tracking-(--font-title-sm-letter-spacing);
+  font-weight: var(--font-title-sm-font-weight);
 }
 
 @utility heading-xxl {
