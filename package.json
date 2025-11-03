@@ -1,5 +1,5 @@
 {
-  "name": "vonvon-design-system",
+  "name": "vonvon-design-sys",
   "version": "0.0.27",
   "type": "module",
   "main": "dist/index.cjs.js",
