@@ -13,7 +13,7 @@ interface ToastProps {
 export default function Toast({ children, icon, iconPosition = "left", className = "" }: ToastProps) {
   return (
     <div
-      className={`flex items-center justify-center gap-[6px] px-7 py-4 bg-opacity-strong rounded-[12px] backdrop-blur-sm w-fit ${className}`}
+      className={`flex items-center justify-center gap-[6px] px-7 py-4 bg-opacity-heavy rounded-[12px] backdrop-blur-sm w-fit ${className}`}
       style={{ fontFamily: "Pretendard, sans-serif" }}
     >
       {iconPosition === "left" && icon}
