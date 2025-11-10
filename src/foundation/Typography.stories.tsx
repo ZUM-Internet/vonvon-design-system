@@ -14,6 +14,13 @@ const meta: Meta = {
 
 export default meta;
 
+const weightVariants = [
+  { name: "Bold", className: "font-bold" },
+  { name: "SemiBold", className: "font-semibold" },
+  { name: "Medium", className: "font-medium" },
+  { name: "Regular", className: "font-regular" },
+];
+
 // Title Styles
 export const TitleStyles: StoryObj = {
   render: () => {
@@ -23,14 +30,22 @@ export const TitleStyles: StoryObj = {
           <h2 className="heading-lg mb-4">Title</h2>
           <div className="space-y-4">
             <div className="border border-gray-200 rounded-lg p-6">
-              <div className="title-sm mb-2" style={{ color: "#0f0f0f" }}>
-                Title SM (26px)
+              <div className="space-y-2">
+                {weightVariants.map((variant) => (
+                  <div
+                    key={variant.name}
+                    className={`title-sm ${variant.className}`}
+                    style={{ color: "#0f0f0f" }}
+                  >
+                    Title SM · {variant.name}
+                  </div>
+                ))}
               </div>
               <div className="text-sm text-gray-600 mt-2">
                 <div>Font Size: 26px</div>
                 <div>Line Height: 138%</div>
                 <div>Letter Spacing: -1%</div>
-                <div>Font Weight: 700</div>
+                <div>Available Weights: Bold / SemiBold / Medium / Regular</div>
                 <div className="mt-2 font-mono text-xs">
                   클래스: <code className="bg-gray-100 px-2 py-1 rounded">title-sm</code>
                 </div>
@@ -96,13 +111,22 @@ export const HeadingStyles: StoryObj = {
           <div className="space-y-4">
             {headings.map((heading) => (
               <div key={heading.name} className="border border-gray-200 rounded-lg p-6">
-                <div className={heading.class} style={{ color: "#0f0f0f", marginBottom: "8px" }}>
-                  {heading.sample}
+                <div className="space-y-2 mb-2">
+                  {weightVariants.map((variant) => (
+                    <div
+                      key={`${heading.name}-${variant.name}`}
+                      className={`${heading.class} ${variant.className}`}
+                      style={{ color: "#0f0f0f" }}
+                    >
+                      {heading.sample} · {variant.name}
+                    </div>
+                  ))}
                 </div>
                 <div className="text-sm text-gray-600 mt-2">
                   <div>Font Size: {heading.size}</div>
                   <div>Line Height: {heading.lineHeight}</div>
                   <div>Letter Spacing: {heading.letterSpacing}</div>
+                  <div>Available Weights: Bold / SemiBold / Medium / Regular</div>
                   <div className="mt-2 font-mono text-xs">
                     클래스: <code className="bg-gray-100 px-2 py-1 rounded">{heading.class}</code>
                   </div>
@@ -177,13 +201,22 @@ export const BodyStyles: StoryObj = {
           <div className="space-y-4">
             {bodyStyles.map((style) => (
               <div key={style.name} className="border border-gray-200 rounded-lg p-6">
-                <div className={style.class} style={{ color: "#474747", marginBottom: "8px" }}>
-                  {style.sample}
+                <div className="space-y-2 mb-2">
+                  {weightVariants.map((variant) => (
+                    <div
+                      key={`${style.name}-${variant.name}`}
+                      className={`${style.class} ${variant.className}`}
+                      style={{ color: "#474747" }}
+                    >
+                      {style.sample} · {variant.name}
+                    </div>
+                  ))}
                 </div>
                 <div className="text-sm text-gray-600 mt-2">
                   <div>Font Size: {style.size}</div>
                   <div>Line Height: {style.lineHeight}</div>
                   <div>Letter Spacing: {style.letterSpacing}</div>
+                  <div>Available Weights: Bold / SemiBold / Medium / Regular</div>
                   <div className="mt-2 font-mono text-xs">
                     클래스: <code className="bg-gray-100 px-2 py-1 rounded">{style.class}</code>
                   </div>
@@ -226,13 +259,22 @@ export const LabelStyles: StoryObj = {
           <div className="space-y-4">
             {labelStyles.map((style) => (
               <div key={style.name} className="border border-gray-200 rounded-lg p-6">
-                <div className={style.class} style={{ color: "#474747", marginBottom: "8px" }}>
-                  {style.sample}
+                <div className="space-y-2 mb-2">
+                  {weightVariants.map((variant) => (
+                    <div
+                      key={`${style.name}-${variant.name}`}
+                      className={`${style.class} ${variant.className}`}
+                      style={{ color: "#474747" }}
+                    >
+                      {style.sample} · {variant.name}
+                    </div>
+                  ))}
                 </div>
                 <div className="text-sm text-gray-600 mt-2">
                   <div>Font Size: {style.size}</div>
                   <div>Line Height: {style.lineHeight}</div>
                   <div>Letter Spacing: {style.letterSpacing}</div>
+                  <div>Available Weights: Bold / SemiBold / Medium / Regular</div>
                   <div className="mt-2 font-mono text-xs">
                     클래스: <code className="bg-gray-100 px-2 py-1 rounded">{style.class}</code>
                   </div>
