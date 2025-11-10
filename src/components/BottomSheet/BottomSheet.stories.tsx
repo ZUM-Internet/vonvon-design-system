@@ -127,34 +127,6 @@ export const LongTitle: StoryObj<typeof BottomSheet> = {
   },
 };
 
-// 복잡한 컨텐츠가 있는 바텀시트
-export const ComplexContent: StoryObj<typeof BottomSheet> = {
-  args: {
-    isOpen: true,
-    title: "복잡한 컨텐츠",
-    children: (
-      <div className="space-y-4">
-        <div className="space-y-2">
-          <h3 className="text-label-strong font-semibold">섹션 1</h3>
-          <p className="text-label-normal body-sm-normal">첫 번째 섹션의 내용입니다.</p>
-        </div>
-        <div className="space-y-2">
-          <h3 className="text-label-strong font-semibold">섹션 2</h3>
-          <p className="text-label-normal body-sm-normal">두 번째 섹션의 내용입니다.</p>
-        </div>
-        <div className="flex gap-2 pt-2">
-          <button className="flex-1 px-4 py-2 bg-primary-normal text-white rounded-lg text-sm">
-            주요 액션
-          </button>
-          <button className="flex-1 px-4 py-2 bg-opacity-neutral text-label-normal rounded-lg text-sm">
-            보조 액션
-          </button>
-        </div>
-      </div>
-    ),
-  },
-};
-
 // 인터랙티브 예시 (실제 사용법)
 const InteractiveExample = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -171,20 +143,6 @@ const InteractiveExample = () => {
       <BottomSheet isOpen={isOpen} onClose={() => setIsOpen(false)} title="인터랙티브 예시">
         <div className="space-y-4">
           <p className="text-label-normal body-md-normal">이 바텀시트는 실제로 열고 닫을 수 있습니다.</p>
-          <div className="flex gap-2">
-            <button
-              onClick={() => setIsOpen(false)}
-              className="px-4 py-2 bg-primary-normal text-white rounded-lg text-sm"
-            >
-              확인
-            </button>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="px-4 py-2 bg-opacity-neutral text-label-normal rounded-lg text-sm"
-            >
-              취소
-            </button>
-          </div>
         </div>
       </BottomSheet>
     </div>
