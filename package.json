@@ -20,7 +20,8 @@
     "format": "prettier --write .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "build:rollup": "rollup -c"
+    "build:rollup": "rollup -c",
+    "deploy-storybook": "storybook build && npx gh-pages -d storybook-static"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
