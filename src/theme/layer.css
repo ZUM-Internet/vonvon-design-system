@@ -1,59 +1,59 @@
 @utility title-sm {
-  @apply text-(length:--font-title-sm-size) leading-(--font-title-sm-line-height) tracking-(--font-title-sm-letter-spacing);
+  @apply text-[var(--font-title-sm-size)] leading-[var(--font-title-sm-line-height)] tracking-[var(--font-title-sm-letter-spacing)];
 }
 
 @utility heading-xxl {
-  @apply text-(length:--font-heading-xxl-size) leading-(--font-heading-xxl-line-height) tracking-(--font-heading-xxl-letter-spacing);
+  @apply text-[var(--font-heading-xxl-size)] leading-[var(--font-heading-xxl-line-height)] tracking-[var(--font-heading-xxl-letter-spacing)];
 }
 
 @utility heading-xl {
-  @apply text-(length:--font-heading-xl-size) leading-(--font-heading-xl-line-height) tracking-(--font-heading-xl-letter-spacing);
+  @apply text-[var(--font-heading-xl-size)] leading-[var(--font-heading-xl-line-height)] tracking-[var(--font-heading-xl-letter-spacing)];
 }
 
 @utility heading-lg {
-  @apply text-(length:--font-heading-lg-size) leading-(--font-heading-lg-line-height) tracking-(--font-heading-lg-letter-spacing);
+  @apply text-[var(--font-heading-lg-size)] leading-[var(--font-heading-lg-line-height)] tracking-[var(--font-heading-lg-letter-spacing)];
 }
 
 @utility heading-md {
-  @apply text-(length:--font-heading-md-size) leading-(--font-heading-md-line-height) tracking-(--font-heading-md-letter-spacing);
+  @apply text-[var(--font-heading-md-size)] leading-[var(--font-heading-md-line-height)] tracking-[var(--font-heading-md-letter-spacing)];
 }
 
 @utility heading-sm {
-  @apply text-(length:--font-heading-sm-size) leading-(--font-heading-sm-line-height) tracking-(--font-heading-sm-letter-spacing);
+  @apply text-[var(--font-heading-sm-size)] leading-[var(--font-heading-sm-line-height)] tracking-[var(--font-heading-sm-letter-spacing)];
 }
 
 @utility body-lg-reading {
-  @apply text-(length:--font-body-lg-reading-size) leading-(--font-body-lg-reading-line-height) tracking-(--font-body-lg-reading-letter-spacing);
+  @apply text-[var(--font-body-lg-reading-size)] leading-[var(--font-body-lg-reading-line-height)] tracking-[var(--font-body-lg-reading-letter-spacing)];
 }
 
 @utility body-lg-normal {
-  @apply text-(length:--font-body-lg-normal-size) leading-(--font-body-lg-normal-line-height) tracking-(--font-body-lg-normal-letter-spacing);
+  @apply text-[var(--font-body-lg-normal-size)] leading-[var(--font-body-lg-normal-line-height)] tracking-[var(--font-body-lg-normal-letter-spacing)];
 }
 
 @utility body-md-reading {
-  @apply text-(length:--font-body-md-reading-size) leading-(--font-body-md-reading-line-height) tracking-(--font-body-md-reading-letter-spacing);
+  @apply text-[var(--font-body-md-reading-size)] leading-[var(--font-body-md-reading-line-height)] tracking-[var(--font-body-md-reading-letter-spacing)];
 }
 
 @utility body-md-normal {
-  @apply text-(length:--font-body-md-normal-size) leading-(--font-body-md-normal-line-height) tracking-(--font-body-md-normal-letter-spacing);
+  @apply text-[var(--font-body-md-normal-size)] leading-[var(--font-body-md-normal-line-height)] tracking-[var(--font-body-md-normal-letter-spacing)];
 }
 
 @utility body-sm-reading {
-  @apply text-(length:--font-body-sm-reading-size) leading-(--font-body-sm-reading-line-height) tracking-(--font-body-sm-reading-letter-spacing);
+  @apply text-[var(--font-body-sm-reading-size)] leading-[var(--font-body-sm-reading-line-height)] tracking-[var(--font-body-sm-reading-letter-spacing)];
 }
 
 @utility body-sm-normal {
-  @apply text-(length:--font-body-sm-normal-size) leading-(--font-body-sm-normal-line-height) tracking-(--font-body-sm-normal-letter-spacing);
+  @apply text-[var(--font-body-sm-normal-size)] leading-[var(--font-body-sm-normal-line-height)] tracking-[var(--font-body-sm-normal-letter-spacing)];
 }
 
 @utility label-md {
-  @apply text-(length:--font-label-md-size) leading-(--font-label-md-line-height) tracking-(--font-label-md-letter-spacing);
+  @apply text-[var(--font-label-md-size)] leading-[var(--font-label-md-line-height)] tracking-[var(--font-label-md-letter-spacing)];
 }
 
 @utility label-sm {
-  @apply text-(length:--font-label-sm-size) leading-(--font-label-sm-line-height) tracking-(--font-label-sm-letter-spacing);
+  @apply text-[var(--font-label-sm-size)] leading-[var(--font-label-sm-line-height)] tracking-[var(--font-label-sm-letter-spacing)];
 }
 
 @utility font-regular {
-  @apply font-(weight:--font-regular);
+  font-weight: var(--font-regular);
 }

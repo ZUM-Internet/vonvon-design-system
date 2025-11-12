@@ -3,7 +3,7 @@
   --color-static-black: #000;
   --color-material-dimmer: rgba(0, 0, 0, 0.6);
 
-  --color-label-heavy: #0c0c0d;
+  --color-label-heavy: #0f0f0f;
   --color-label-strong: #1c1c1c;
   --color-label-normal: #474747;
   --color-label-neutral: #5c5c5c;
@@ -32,6 +32,22 @@
 
   --color-social-kakao: #ffed47;
   --color-social-facebook: #1a75ff;
+
+  --color-success-normal: #15ae6e;
+  --color-success-neutral: #81dfb8;
+  --color-success-alternative: #c0eddd;
+  --color-success-assistive: #e9f8f2;
+
+  --color-warning-normal: #ff9900;
+  --color-warning-neutral: #ffd9b3;
+  --color-warning-alternative: #ffeccc;
+  --color-warning-assistive: #fff3e6;
+
+  --color-info-strong: #a8071a;
+  --color-info-normal: #ed1223;
+  --color-info-neutral: #ff5c5e;
+  --color-info-alternative: #ffdddb;
+  --color-info-assistive: #ffeceb;
 
   /* Title */
   --font-title-sm-size: 26px;
