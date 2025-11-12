@@ -1,6 +1,6 @@
 {
   "name": "vonvon-design-sys",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -21,7 +21,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "build:rollup": "rollup -c",
-    "deploy-storybook": "storybook build && npx gh-pages -d storybook-static"
+    "deploy-storybook": "storybook build && npx gh-pages -d storybook-static",
+    "prepublishOnly": "npm run build:rollup"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
