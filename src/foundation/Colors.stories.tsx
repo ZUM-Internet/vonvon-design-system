@@ -46,7 +46,7 @@ const colorSections: ColorSection[] = [
     id: "label",
     title: "Label Colors",
     colors: [
-      { label: "label-heavy", var: "--color-label-heavy", value: "#0c0c0d" },
+      { label: "label-heavy", var: "--color-label-heavy", value: "#0F0F0F" },
       { label: "label-strong", var: "--color-label-strong", value: "#1c1c1c" },
       { label: "label-normal", var: "--color-label-normal", value: "#474747" },
       { label: "label-neutral", var: "--color-label-neutral", value: "#5c5c5c" },
@@ -108,6 +108,37 @@ const colorSections: ColorSection[] = [
     colors: [
       { label: "social-kakao", var: "--color-social-kakao", value: "#ffed47" },
       { label: "social-facebook", var: "--color-social-facebook", value: "#1a75ff" },
+    ],
+  },
+  {
+    id: "success",
+    title: "Success Colors",
+    colors: [
+      { label: "success-normal", var: "--color-success-normal", value: "#15ae6e" },
+      { label: "success-neutral", var: "--color-success-neutral", value: "#81dfb8" },
+      { label: "success-alternative", var: "--color-success-alternative", value: "#c0eddd" },
+      { label: "success-assistive", var: "--color-success-assistive", value: "#e9f8f2" },
+    ],
+  },
+  {
+    id: "warning",
+    title: "Warning Colors",
+    colors: [
+      { label: "warning-normal", var: "--color-warning-normal", value: "#ff9900" },
+      { label: "warning-neutral", var: "--color-warning-neutral", value: "#ffd9b3" },
+      { label: "warning-alternative", var: "--color-warning-alternative", value: "#ffeccc" },
+      { label: "warning-assistive", var: "--color-warning-assistive", value: "#fff3e6" },
+    ],
+  },
+  {
+    id: "info",
+    title: "Info Colors",
+    colors: [
+      { label: "info-strong", var: "--color-info-strong", value: "#a8071a" },
+      { label: "info-normal", var: "--color-info-normal", value: "#ed1223" },
+      { label: "info-neutral", var: "--color-info-neutral", value: "#ff5c5e" },
+      { label: "info-alternative", var: "--color-info-alternative", value: "#ffdddb" },
+      { label: "info-assistive", var: "--color-info-assistive", value: "#ffeceb" },
     ],
   },
 ];
@@ -187,6 +218,9 @@ export const InteractionColors: Story = createColorStory("interaction");
 export const LineColors: Story = createColorStory("line");
 export const PrimaryColors: Story = createColorStory("primary");
 export const SocialColors: Story = createColorStory("social");
+export const SuccessColors: Story = createColorStory("success");
+export const WarningColors: Story = createColorStory("warning");
+export const InfoColors: Story = createColorStory("info");
 export const ThemeColors: Story = {
   name: "All Theme Colors",
   render: CombinedTemplate,

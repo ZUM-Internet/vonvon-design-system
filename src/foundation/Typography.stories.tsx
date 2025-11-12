@@ -21,6 +21,9 @@ const weightVariants = [
   { name: "Regular", className: "font-regular" },
 ];
 
+const getVariants = (excluded: Array<(typeof weightVariants)[number]["name"]> = []) =>
+  weightVariants.filter((variant) => !excluded.includes(variant.name));
+
 // Title Styles
 export const TitleStyles: StoryObj = {
   render: () => {
@@ -31,7 +34,7 @@ export const TitleStyles: StoryObj = {
           <div className="space-y-4">
             <div className="border border-gray-200 rounded-lg p-6">
               <div className="space-y-2">
-                {weightVariants.map((variant) => (
+                {getVariants(["Regular"]).map((variant) => (
                   <div
                     key={variant.name}
                     className={`title-sm ${variant.className}`}
@@ -45,7 +48,12 @@ export const TitleStyles: StoryObj = {
                 <div>Font Size: 26px</div>
                 <div>Line Height: 138%</div>
                 <div>Letter Spacing: -1%</div>
-                <div>Available Weights: Bold / SemiBold / Medium / Regular</div>
+                <div>
+                  Available Weights:{" "}
+                  {getVariants(["Regular"])
+                    .map((variant) => variant.name)
+                    .join(" / ")}
+                </div>
                 <div className="mt-2 font-mono text-xs">
                   클래스: <code className="bg-gray-100 px-2 py-1 rounded">title-sm</code>
                 </div>
@@ -69,6 +77,7 @@ export const HeadingStyles: StoryObj = {
         lineHeight: "135%",
         letterSpacing: "-0.48px",
         sample: "Heading XXL 텍스트",
+        excludedWeights: ["Regular"] as const,
       },
       {
         name: "Heading XL",
@@ -77,6 +86,7 @@ export const HeadingStyles: StoryObj = {
         lineHeight: "120%",
         letterSpacing: "-0.44px",
         sample: "Heading XL 텍스트",
+        excludedWeights: ["Regular"] as const,
       },
       {
         name: "Heading LG",
@@ -85,6 +95,7 @@ export const HeadingStyles: StoryObj = {
         lineHeight: "120%",
         letterSpacing: "-0.4px",
         sample: "Heading LG 텍스트",
+        excludedWeights: ["Regular"] as const,
       },
       {
         name: "Heading MD",
@@ -93,6 +104,7 @@ export const HeadingStyles: StoryObj = {
         lineHeight: "140%",
         letterSpacing: "-0.36px",
         sample: "Heading MD 텍스트",
+        excludedWeights: ["Regular"] as const,
       },
       {
         name: "Heading SM",
@@ -101,6 +113,7 @@ export const HeadingStyles: StoryObj = {
         lineHeight: "140%",
         letterSpacing: "-0.34px",
         sample: "Heading SM 텍스트",
+        excludedWeights: ["Bold"] as const,
       },
     ];
 
@@ -112,7 +125,7 @@ export const HeadingStyles: StoryObj = {
             {headings.map((heading) => (
               <div key={heading.name} className="border border-gray-200 rounded-lg p-6">
                 <div className="space-y-2 mb-2">
-                  {weightVariants.map((variant) => (
+                  {getVariants([...heading.excludedWeights]).map((variant) => (
                     <div
                       key={`${heading.name}-${variant.name}`}
                       className={`${heading.class} ${variant.className}`}
@@ -126,7 +139,12 @@ export const HeadingStyles: StoryObj = {
                   <div>Font Size: {heading.size}</div>
                   <div>Line Height: {heading.lineHeight}</div>
                   <div>Letter Spacing: {heading.letterSpacing}</div>
-                  <div>Available Weights: Bold / SemiBold / Medium / Regular</div>
+                  <div>
+                    Available Weights:{" "}
+                    {getVariants([...heading.excludedWeights])
+                      .map((variant) => variant.name)
+                      .join(" / ")}
+                  </div>
                   <div className="mt-2 font-mono text-xs">
                     클래스: <code className="bg-gray-100 px-2 py-1 rounded">{heading.class}</code>
                   </div>
@@ -148,9 +166,10 @@ export const BodyStyles: StoryObj = {
         name: "Body LG Reading",
         class: "body-lg-reading",
         size: "16px",
-        lineHeight: "140%",
+        lineHeight: "158%",
         letterSpacing: "0.32px",
         sample: "Body LG Reading 텍스트입니다. 읽기용 본문 스타일로 장문 텍스트에 적합합니다.",
+        excludedWeights: ["Bold"] as const,
       },
       {
         name: "Body LG Normal",
@@ -159,14 +178,16 @@ export const BodyStyles: StoryObj = {
         lineHeight: "120%",
         letterSpacing: "-0.32px",
         sample: "Body LG Normal 텍스트입니다. 일반 본문 스타일입니다.",
+        excludedWeights: ["Bold"] as const,
       },
       {
         name: "Body MD Reading",
         class: "body-md-reading",
         size: "15px",
-        lineHeight: "140%",
+        lineHeight: "150%",
         letterSpacing: "-0.3px",
         sample: "Body MD Reading 텍스트입니다. 읽기용 본문 스타일로 장문 텍스트에 적합합니다.",
+        excludedWeights: ["Bold"] as const,
       },
       {
         name: "Body MD Normal",
@@ -175,6 +196,7 @@ export const BodyStyles: StoryObj = {
         lineHeight: "120%",
         letterSpacing: "-0.3px",
         sample: "Body MD Normal 텍스트입니다. 일반 본문 스타일입니다.",
+        excludedWeights: ["Bold"] as const,
       },
       {
         name: "Body SM Reading",
@@ -183,6 +205,7 @@ export const BodyStyles: StoryObj = {
         lineHeight: "140%",
         letterSpacing: "-0.28px",
         sample: "Body SM Reading 텍스트입니다. 읽기용 본문 스타일로 장문 텍스트에 적합합니다.",
+        excludedWeights: ["Bold"] as const,
       },
       {
         name: "Body SM Normal",
@@ -191,6 +214,7 @@ export const BodyStyles: StoryObj = {
         lineHeight: "120%",
         letterSpacing: "-0.28px",
         sample: "Body SM Normal 텍스트입니다. 일반 본문 스타일입니다.",
+        excludedWeights: ["Bold"] as const,
       },
     ];
 
@@ -202,7 +226,7 @@ export const BodyStyles: StoryObj = {
             {bodyStyles.map((style) => (
               <div key={style.name} className="border border-gray-200 rounded-lg p-6">
                 <div className="space-y-2 mb-2">
-                  {weightVariants.map((variant) => (
+                  {getVariants([...style.excludedWeights]).map((variant) => (
                     <div
                       key={`${style.name}-${variant.name}`}
                       className={`${style.class} ${variant.className}`}
@@ -216,7 +240,12 @@ export const BodyStyles: StoryObj = {
                   <div>Font Size: {style.size}</div>
                   <div>Line Height: {style.lineHeight}</div>
                   <div>Letter Spacing: {style.letterSpacing}</div>
-                  <div>Available Weights: Bold / SemiBold / Medium / Regular</div>
+                  <div>
+                    Available Weights:{" "}
+                    {getVariants([...style.excludedWeights])
+                      .map((variant) => variant.name)
+                      .join(" / ")}
+                  </div>
                   <div className="mt-2 font-mono text-xs">
                     클래스: <code className="bg-gray-100 px-2 py-1 rounded">{style.class}</code>
                   </div>
@@ -241,6 +270,7 @@ export const LabelStyles: StoryObj = {
         lineHeight: "120%",
         letterSpacing: "-0.26px",
         sample: "Label MD 텍스트",
+        excludedWeights: ["Bold"] as const,
       },
       {
         name: "Label SM",
@@ -249,6 +279,7 @@ export const LabelStyles: StoryObj = {
         lineHeight: "120%",
         letterSpacing: "-0.12px",
         sample: "Label SM 텍스트",
+        excludedWeights: ["Bold"] as const,
       },
     ];
 
@@ -260,7 +291,7 @@ export const LabelStyles: StoryObj = {
             {labelStyles.map((style) => (
               <div key={style.name} className="border border-gray-200 rounded-lg p-6">
                 <div className="space-y-2 mb-2">
-                  {weightVariants.map((variant) => (
+                  {getVariants([...style.excludedWeights]).map((variant) => (
                     <div
                       key={`${style.name}-${variant.name}`}
                       className={`${style.class} ${variant.className}`}
@@ -274,7 +305,12 @@ export const LabelStyles: StoryObj = {
                   <div>Font Size: {style.size}</div>
                   <div>Line Height: {style.lineHeight}</div>
                   <div>Letter Spacing: {style.letterSpacing}</div>
-                  <div>Available Weights: Bold / SemiBold / Medium / Regular</div>
+                  <div>
+                    Available Weights:{" "}
+                    {getVariants([...style.excludedWeights])
+                      .map((variant) => variant.name)
+                      .join(" / ")}
+                  </div>
                   <div className="mt-2 font-mono text-xs">
                     클래스: <code className="bg-gray-100 px-2 py-1 rounded">{style.class}</code>
                   </div>
