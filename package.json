@@ -1,6 +1,6 @@
 {
   "name": "vonvon-design-sys",
-  "version": "0.0.4",
+  "version": "0.0.41",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -29,7 +29,7 @@
   "dependencies": {
     "framer-motion": "^12.23.11",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.0.1",
