@@ -1,57 +1,85 @@
 @utility title-sm {
-  @apply text-[var(--font-title-sm-size)] leading-[var(--font-title-sm-line-height)] tracking-[var(--font-title-sm-letter-spacing)];
+  font-size: var(--font-title-sm-size);
+  line-height: var(--font-title-sm-line-height);
+  letter-spacing: var(--font-title-sm-letter-spacing);
 }
 
 @utility heading-xxl {
-  @apply text-[var(--font-heading-xxl-size)] leading-[var(--font-heading-xxl-line-height)] tracking-[var(--font-heading-xxl-letter-spacing)];
+  font-size: var(--font-heading-xxl-size);
+  line-height: var(--font-heading-xxl-line-height);
+  letter-spacing: var(--font-heading-xxl-letter-spacing);
 }
 
 @utility heading-xl {
-  @apply text-[var(--font-heading-xl-size)] leading-[var(--font-heading-xl-line-height)] tracking-[var(--font-heading-xl-letter-spacing)];
+  font-size: var(--font-heading-xl-size);
+  line-height: var(--font-heading-xl-line-height);
+  letter-spacing: var(--font-heading-xl-letter-spacing);
 }
 
 @utility heading-lg {
-  @apply text-[var(--font-heading-lg-size)] leading-[var(--font-heading-lg-line-height)] tracking-[var(--font-heading-lg-letter-spacing)];
+  font-size: var(--font-heading-lg-size);
+  line-height: var(--font-heading-lg-line-height);
+  letter-spacing: var(--font-heading-lg-letter-spacing);
 }
 
 @utility heading-md {
-  @apply text-[var(--font-heading-md-size)] leading-[var(--font-heading-md-line-height)] tracking-[var(--font-heading-md-letter-spacing)];
+  font-size: var(--font-heading-md-size);
+  line-height: var(--font-heading-md-line-height);
+  letter-spacing: var(--font-heading-md-letter-spacing);
 }
 
 @utility heading-sm {
-  @apply text-[var(--font-heading-sm-size)] leading-[var(--font-heading-sm-line-height)] tracking-[var(--font-heading-sm-letter-spacing)];
+  font-size: var(--font-heading-sm-size);
+  line-height: var(--font-heading-sm-line-height);
+  letter-spacing: var(--font-heading-sm-letter-spacing);
 }
 
 @utility body-lg-reading {
-  @apply text-[var(--font-body-lg-reading-size)] leading-[var(--font-body-lg-reading-line-height)] tracking-[var(--font-body-lg-reading-letter-spacing)];
+  font-size: var(--font-body-lg-reading-size);
+  line-height: var(--font-body-lg-reading-line-height);
+  letter-spacing: var(--font-body-lg-reading-letter-spacing);
 }
 
 @utility body-lg-normal {
-  @apply text-[var(--font-body-lg-normal-size)] leading-[var(--font-body-lg-normal-line-height)] tracking-[var(--font-body-lg-normal-letter-spacing)];
+  font-size: var(--font-body-lg-normal-size);
+  line-height: var(--font-body-lg-normal-line-height);
+  letter-spacing: var(--font-body-lg-normal-letter-spacing);
 }
 
 @utility body-md-reading {
-  @apply text-[var(--font-body-md-reading-size)] leading-[var(--font-body-md-reading-line-height)] tracking-[var(--font-body-md-reading-letter-spacing)];
+  font-size: var(--font-body-md-reading-size);
+  line-height: var(--font-body-md-reading-line-height);
+  letter-spacing: var(--font-body-md-reading-letter-spacing);
 }
 
 @utility body-md-normal {
-  @apply text-[var(--font-body-md-normal-size)] leading-[var(--font-body-md-normal-line-height)] tracking-[var(--font-body-md-normal-letter-spacing)];
+  font-size: var(--font-body-md-normal-size);
+  line-height: var(--font-body-md-normal-line-height);
+  letter-spacing: var(--font-body-md-normal-letter-spacing);
 }
 
 @utility body-sm-reading {
-  @apply text-[var(--font-body-sm-reading-size)] leading-[var(--font-body-sm-reading-line-height)] tracking-[var(--font-body-sm-reading-letter-spacing)];
+  font-size: var(--font-body-sm-reading-size);
+  line-height: var(--font-body-sm-reading-line-height);
+  letter-spacing: var(--font-body-sm-reading-letter-spacing);
 }
 
 @utility body-sm-normal {
-  @apply text-[var(--font-body-sm-normal-size)] leading-[var(--font-body-sm-normal-line-height)] tracking-[var(--font-body-sm-normal-letter-spacing)];
+  font-size: var(--font-body-sm-normal-size);
+  line-height: var(--font-body-sm-normal-line-height);
+  letter-spacing: var(--font-body-sm-normal-letter-spacing);
 }
 
 @utility label-md {
-  @apply text-[var(--font-label-md-size)] leading-[var(--font-label-md-line-height)] tracking-[var(--font-label-md-letter-spacing)];
+  font-size: var(--font-label-md-size);
+  line-height: var(--font-label-md-line-height);
+  letter-spacing: var(--font-label-md-letter-spacing);
 }
 
 @utility label-sm {
-  @apply text-[var(--font-label-sm-size)] leading-[var(--font-label-sm-line-height)] tracking-[var(--font-label-sm-letter-spacing)];
+  font-size: var(--font-label-sm-size);
+  line-height: var(--font-label-sm-line-height);
+  letter-spacing: var(--font-label-sm-letter-spacing);
 }
 
 @utility font-regular {
