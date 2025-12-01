@@ -104,7 +104,7 @@ const BottomSheet = ({
             {/* Header */}
             <div className="text-center px-2 mb-5">
               <h2
-                className={`heading-xl font-bold mb-1 truncate max-w-95 ${textAlignClass}`}
+                className={`heading-xl font-bold mb-1 truncate max-w-100 ${textAlignClass}`}
                 style={{ fontFamily: "Pretendard, sans-serif" }}
                 title={title}
               >
