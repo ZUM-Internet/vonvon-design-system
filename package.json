@@ -1,6 +1,6 @@
 {
   "name": "vonvon-design-sys",
-  "version": "0.0.43",
+  "version": "0.0.44",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run build:rollup",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "preview": "vite preview",
     "format": "prettier --write .",
