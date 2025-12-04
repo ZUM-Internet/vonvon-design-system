@@ -194,7 +194,7 @@ const BottomSheet = ({
             {/* Header */}
             <div className="text-center px-2 mb-5">
               <h2
-                className={`heading-xl font-bold mb-1 truncate max-w-95 ${textAlignClass}`}
+                className={`heading-xl font-bold mb-1 truncate ${textAlignClass}`}
                 style={{ fontFamily: "Pretendard, sans-serif" }}
                 title={title}
               >
@@ -244,7 +244,7 @@ const BottomSheet = ({
             <div className="flex items-center justify-between px-5 pt-7 pb-5">
               <div className="w-full flex flex-col gap-[4px]">
                 <h2
-                  className={`heading-xl font-bold mb-1 truncate max-w-95 ${textAlignClass}`}
+                  className={`heading-xl font-bold mb-1 truncate ${textAlignClass}`}
                   style={{ fontFamily: "Pretendard, sans-serif" }}
                   title={title}
                 >
